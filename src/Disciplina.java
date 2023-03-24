@@ -3,18 +3,19 @@ import java.util.List;
 
 public class Disciplina{
   String nome;
-  private List <Assunto> assuntos = new ArrayList<>();
+  private List <String> conteudos = new ArrayList<>();
 
-  public void getAssuntos() {
-    System.out.println(this.nome.concat(": "));
-    for (Assunto assunto : assuntos) {
-      for (int i = 0; i < assuntos.size(); i++) {
-        System.out.println("- " + assunto.nome);
-      }
+  public String getConteudos() {
+    String ListaDeConteudos = this.nome+": ";
+    for (int i = 0; i < conteudos.size(); i++) {
+      ListaDeConteudos += "\n- " + conteudos.get(i);
     }
+    return ListaDeConteudos;
   }
 
-  public void setAssuntos(Assunto assunto) {
-    this.assuntos.add(assunto);
+  public Disciplina(String nome, List<String> conteudos) {
+    this.nome = nome;
+    this.conteudos = conteudos;
   }
+
 }
