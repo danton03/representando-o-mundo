@@ -5,16 +5,14 @@ public class App {
     private static List<Disciplina> disciplinas = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
-       for (Disciplina disciplina : disciplinas) {
+        System.out.println("Matérias:");
+        gerarDisciplinasEConteudo();
+        for (Disciplina disciplina : disciplinas) {
             System.out.println(disciplina.getConteudos());
         } 
     }
 
-    public App() {
-        gerarDisciplinasEConteudo();
-    }
-
-    void gerarDisciplinasEConteudo(){
+    static void gerarDisciplinasEConteudo(){
         List<String> disciplinasDeCalculo = new ArrayList<>();
         disciplinasDeCalculo.add("Limite");
         disciplinasDeCalculo.add("Derivada");

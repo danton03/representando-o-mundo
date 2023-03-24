@@ -6,7 +6,7 @@ public class Disciplina{
   private List <String> conteudos = new ArrayList<>();
 
   public String getConteudos() {
-    String ListaDeConteudos = this.nome+": ";
+    String ListaDeConteudos = "\n" + this.nome+ ": ";
     for (int i = 0; i < conteudos.size(); i++) {
       ListaDeConteudos += "\n- " + conteudos.get(i);
     }
